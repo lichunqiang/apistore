@@ -1,0 +1,61 @@
+<?php
+
+/*
+ * This file is part of the light/yii2-apistore.
+ *
+ * (c) lichunqiang <light-li@hotmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
+namespace light\apistore\apis;
+
+class Translate extends Api
+{
+    private $address_translate = 'http://apis.baidu.com/apistore/tranlateservice/translate?';
+
+    private $address_dict = 'http://apis.baidu.com/apistore/tranlateservice/dictionary?';
+
+    private $_using_address;
+    /**
+     * ~~~
+     * {
+     *   "errNum": 0,
+     *   "errMsg": "success",
+     *   "retData": {
+     *     "from": "en",
+     *     "to": "zh",
+     *     "trans_result": [
+     *       {
+     *         "src": "make love with you",
+     *         "dst": "和你做爱"
+     *       }
+     *     ]
+     *   }
+     * }
+     * ~~~
+     * 目前词典接口只支持zh和en两种语言
+     *
+     * @param string $query 请求的词语或待翻译的内容,UTF-8,urlencode编码
+     * @param string $from  源语言语种：语言代码或auto
+     * @param string $to    目标语言语种：语言代码或auto
+     *
+     * @return array
+     */
+    public function get($query, $from = 'auto', $to = 'auto')
+    {
+        $this->_using_address = $this->address_translate;
+
+        $query_str = http_build_query(compact('query', 'from', 'to'));
+
+        return $this->fetch($this->_using_address . $query_str);
+    }
+
+    public function dictionary($words, $from = 'en', $to = 'zh')
+    {
+        $this->_using_address = $this->address_dict;
+
+        return $this->get($query, $from, $to);
+    }
+}
