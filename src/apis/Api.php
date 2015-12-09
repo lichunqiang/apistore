@@ -11,23 +11,26 @@
 
 namespace light\apistore\apis;
 
-use yii\base\Object;
 
-abstract class Api extends Object
+abstract class Api
 {
     public $apikey;
+
     /**
      * {@inheritdoc}
      *
      * @param string $apikey Api key
-     * @param array  $config
      */
-    public function __construct($apikey, $config = [])
+    public function __construct($apikey)
     {
         $this->apikey = $apikey;
-        parent::__construct($config);
     }
 
+    /**
+     * Fetch result.
+     * @param  mixed $params
+     * @return mixed
+     */
     abstract public function get($params);
 
     /**

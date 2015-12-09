@@ -11,9 +11,6 @@
 
 namespace light\apistore;
 
-use Yii;
-use yii\base\Object;
-
 /**
  * 调用总线
  * ~~~
@@ -21,7 +18,7 @@ use yii\base\Object;
  * $result = $store->phone->get('123123123');
  * ~~~
  */
-class ApiStore extends Object
+class ApiStore
 {
     /**
      * The app key of calling the interface.
@@ -35,18 +32,17 @@ class ApiStore extends Object
         'phone' => 'light\apistore\apis\Phone',
         'translate' => 'light\apistore\apis\Translate',
         'idcard' => 'light\apistore\apis\IdCard',
+        'currency' => 'light\apistore\apis\Currency',
     ];
 
     /**
      * Init.
      *
      * @param string $apikey 调用接口的API key
-     * @param array  $config 类的配置数组
      */
-    public function __construct($apikey, $config = [])
+    public function __construct($apikey)
     {
         $this->apikey = $apikey;
-        parent::__construct($config);
     }
     /**
      * Implement the __get magic method.
@@ -61,10 +57,10 @@ class ApiStore extends Object
     public function __get($name)
     {
         if (isset(static::$supportedApis[$name])) {
-            return Yii::createObject(static::$supportedApis[$name], [$this->apikey]);
+            $class = static::$supportedApis[$name];
+            return new $class($this->apikey);
         }
-
-        return parent::__get($name);
+        throw new \Exception('Not exists method');
     }
 
     /**

@@ -9,7 +9,7 @@
 		</testsuite>
 	</testsuites>
 	<php>
-		<var name="api_key" value="teststestst"/>
+		<var name="api_key" value="c38d345e5eec2352140a52a3aa2e1319"/>
 		<var name="fake_api_key" value="teststestst"/>
 	</php>
 </phpunit>

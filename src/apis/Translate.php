@@ -17,24 +17,7 @@ class Translate extends Api
 
     private $address_dict = 'http://apis.baidu.com/apistore/tranlateservice/dictionary?';
 
-    private $_using_address;
     /**
-     * ~~~
-     * {
-     *   "errNum": 0,
-     *   "errMsg": "success",
-     *   "retData": {
-     *     "from": "en",
-     *     "to": "zh",
-     *     "trans_result": [
-     *       {
-     *         "src": "make love with you",
-     *         "dst": "和你做爱"
-     *       }
-     *     ]
-     *   }
-     * }
-     * ~~~
      * 目前词典接口只支持zh和en两种语言
      *
      * @param string $query 请求的词语或待翻译的内容,UTF-8,urlencode编码
@@ -43,18 +26,22 @@ class Translate extends Api
      *
      * @return array
      */
-    public function get($query, $from = 'auto', $to = 'auto')
+    public function get($queryParams)
     {
-        $this->_using_address = $this->address_translate;
+        $_using_address = $this->address_translate;
 
-        $query_str = http_build_query(compact('query', 'from', 'to'));
+        if (is_string($queryParams)) {
+            $queryParams = ['query' => $queryParams, 'from' => 'auto', 'to' => 'auto'];
+        } elseif (!isset($queryParams['query'])) {
+            $queryParams = array_combine(['query', 'from', 'to'], $queryParams);
+        }
 
-        return $this->fetch($this->_using_address . $query_str);
+        return $this->fetch($_using_address . http_build_query($queryParams));
     }
 
     public function dictionary($words, $from = 'en', $to = 'zh')
     {
-        $this->_using_address = $this->address_dict;
+        $_using_address = $this->address_dict;
 
         return $this->get($query, $from, $to);
     }

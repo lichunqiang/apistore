@@ -1,5 +1,5 @@
 {
-  "name": "light/yii2-apistore",
+  "name": "light/apistore",
   "description": "百度API商品免费接口封装",
   "type": "library",
   "keywords": ["yii2","extension","apistore"],
@@ -10,9 +10,6 @@
       "email": "light-li@hotmail.com"
     }
   ],
-  "require": {
-    "yiisoft/yii2": "*"
-  },
   "require-dev": {
     "fabpot/php-cs-fixer": "^1.11",
     "phpunit/phpunit": "^4.0"

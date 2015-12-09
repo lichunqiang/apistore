@@ -9,7 +9,7 @@ class StoreTest extends \PHPUnit_Framework_TestCase
     public function testAttributes()
     {
         $store = new ApiStore('testesttseesteste');
-        $this->assertClassHasAttribute('apikey', ApiStore::className());
+        $this->assertClassHasAttribute('apikey', 'light\apistore\ApiStore');
     }
 
     public function testInstance()
@@ -23,7 +23,7 @@ class StoreTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \yii\base\UnknownPropertyException
+     * @expectedException \Exception
      */
     public function testNoInstance()
     {
