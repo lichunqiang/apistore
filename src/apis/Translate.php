@@ -11,6 +11,10 @@
 
 namespace light\apistore\apis;
 
+/**
+ * 翻译
+ * @see http://apistore.baidu.com/apiworks/servicedetail/118.html
+ */
 class Translate extends Api
 {
     private $address_translate = 'http://apis.baidu.com/apistore/tranlateservice/translate?';

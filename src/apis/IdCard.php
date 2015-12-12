@@ -11,6 +11,10 @@
 
 namespace light\apistore\apis;
 
+/**
+ * 身份证查询
+ * @see http://apistore.baidu.com/apiworks/servicedetail/113.html
+ */
 class IdCard extends Api
 {
     private $address = 'http://apis.baidu.com/apistore/idservice/id?';
