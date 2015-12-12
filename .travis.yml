@@ -26,5 +26,4 @@ install:
 
 
 script:
-    vendor/bin/phpunit --version
     vendor/bin/phpunit --configuration phpunit.xml
