@@ -2,7 +2,7 @@ apistore
 =============
 [![Build Status](https://img.shields.io/travis/lichunqiang/apistore.svg?style=flat-square)](http://travis-ci.org/lichunqiang/apistore)
 [![version](https://img.shields.io/packagist/v/light/apistore.svg?style=flat-square)](https://packagist.org/packages/light/apistore)
-[![Download](https://img.shields.io/packagist/dd/light/apistore.svg?style=flat-square)](https://packagist.org/packages/light/apistore)
+[![Download](https://img.shields.io/packagist/dt/light/apistore.svg?style=flat-square)](https://packagist.org/packages/light/apistore)
 [![Issues](https://img.shields.io/github/issues/lichunqiang/apistore.svg?style=flat-square)](https://github.com/lichunqiang/apistore/issues)
 
 百度APIStore免费接口封装
