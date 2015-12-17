@@ -50,6 +50,11 @@ abstract class Api
         ];
     }
 
+    /**
+     * Fetch result by $address
+     * @param  string $address
+     * @return mixed
+     */
     public function fetch($address)
     {
         $ch = curl_init();
@@ -64,7 +69,12 @@ abstract class Api
         return $this->_parseResponse($res);
     }
 
-    private function _parseResponse($result)
+    /**
+     * Parse response to array
+     * @param  mixed $result
+     * @return array
+     */
+    protected function _parseResponse($result)
     {
         if (!$this->isJsonResponse) {
             return $result;

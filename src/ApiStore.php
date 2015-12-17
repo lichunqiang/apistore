@@ -34,6 +34,7 @@ class ApiStore
         'idcard' => 'light\apistore\apis\IdCard',
         'currency' => 'light\apistore\apis\Currency',
         'pullword' => 'light\apistore\apis\PullWord',
+        'distance' => 'light\apistore\apis\Distance',
     ];
 
     /**
