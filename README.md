@@ -52,6 +52,8 @@ if ($result['errcode'] == 0) {
 * [翻译接口](http://apistore.baidu.com/apiworks/servicedetail/118.html)  			`$store->translate`
 * [IP地址查询](http://apistore.baidu.com/apiworks/servicedetail/114.html) 			`$sotre->ip`
 * [汇率转换](http://apistore.baidu.com/apiworks/servicedetail/119.html) 			`$sotre->currency`
+* [pullword在线分词服务](http://apistore.baidu.com/apiworks/servicedetail/143.html) `$sotre->pullword`
+* [测距](http://apistore.baidu.com/apiworks/servicedetail/473.html) 			`$sotre->distance`
 
 如何添加新接口
 -------------

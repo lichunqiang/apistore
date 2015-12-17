@@ -11,6 +11,9 @@
 
 namespace light\apistore\apis;
 
+/**
+ * @see http://apistore.baidu.com/apiworks/servicedetail/473.html
+ */
 class Distance extends Api
 {
     /**
