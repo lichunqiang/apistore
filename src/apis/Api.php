@@ -17,6 +17,11 @@ abstract class Api
     public $apikey;
 
     /**
+     * @var boolean If Response is json format, Default is true, will decode to array.
+     */
+    protected $isJsonResponse = true;
+
+    /**
      * {@inheritdoc}
      *
      * @param string $apikey Api key
@@ -61,6 +66,9 @@ abstract class Api
 
     private function _parseResponse($result)
     {
+        if (!$this->isJsonResponse) {
+            return $result;
+        }
         $result = json_decode($result, true);
         if (!$result || !isset($result['errNum'])) {
             return ['errcode' => 1, 'errmsg' => 'fetch data error'];

@@ -33,6 +33,7 @@ class ApiStore
         'translate' => 'light\apistore\apis\Translate',
         'idcard' => 'light\apistore\apis\IdCard',
         'currency' => 'light\apistore\apis\Currency',
+        'pullword' => 'light\apistore\apis\PullWord',
     ];
 
     /**
