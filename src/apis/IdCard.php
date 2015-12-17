@@ -12,7 +12,8 @@
 namespace light\apistore\apis;
 
 /**
- * 身份证查询
+ * 身份证查询.
+ *
  * @see http://apistore.baidu.com/apiworks/servicedetail/113.html
  */
 class IdCard extends Api

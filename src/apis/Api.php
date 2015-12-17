@@ -11,13 +11,12 @@
 
 namespace light\apistore\apis;
 
-
 abstract class Api
 {
     public $apikey;
 
     /**
-     * @var boolean If Response is json format, Default is true, will decode to array.
+     * @var bool If Response is json format, Default is true, will decode to array.
      */
     protected $isJsonResponse = true;
 
@@ -33,7 +32,9 @@ abstract class Api
 
     /**
      * Fetch result.
-     * @param  mixed $params
+     *
+     * @param mixed $params
+     *
      * @return mixed
      */
     abstract public function get($params);
@@ -51,8 +52,10 @@ abstract class Api
     }
 
     /**
-     * Fetch result by $address
-     * @param  string $address
+     * Fetch result by $address.
+     *
+     * @param string $address
+     *
      * @return mixed
      */
     public function fetch($address)
@@ -70,8 +73,10 @@ abstract class Api
     }
 
     /**
-     * Parse response to array
-     * @param  mixed $result
+     * Parse response to array.
+     *
+     * @param mixed $result
+     *
      * @return array
      */
     protected function _parseResponse($result)

@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the light/yii2-apistore.
+ *
+ * (c) lichunqiang <light-li@hotmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 namespace light\apistore\apis;
 
 /**
@@ -8,12 +17,12 @@ namespace light\apistore\apis;
 class PullWord extends Api
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     private $address = 'http://apis.baidu.com/apistore/pullword/words?';
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     protected $isJsonResponse = false;
 
@@ -27,6 +36,7 @@ class PullWord extends Api
         } elseif (!isset($queryParams['source'])) {
             $queryParams = array_combine(['source', 'param1', 'param2'], $queryParams);
         }
+
         return $this->fetch($this->address . http_build_query($queryParams));
     }
 }

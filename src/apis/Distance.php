@@ -1,11 +1,20 @@
 <?php
 
+/*
+ * This file is part of the light/yii2-apistore.
+ *
+ * (c) lichunqiang <light-li@hotmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 namespace light\apistore\apis;
 
 class Distance extends Api
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     private $address = 'http://apis.baidu.com/apistore/distance/waypoints?';
 
@@ -20,10 +29,12 @@ class Distance extends Api
      * If $queryParams is string:
      *     需要测距的点的经纬度坐标；需传入两个或更多的点。
      *     两个点之间用 “; ”进行分割开，单个点的经纬度用“,”分隔开；
-     *     例如： waypoints=118.77147503233,32.054128923368;116.3521416286, 39.965780080447;116.28215586757,39.965780080447
+     *     例如： waypoints=118.77147503233,32.054128923368;116.3521416286, 39.965780080447;116.28215586757,39.965780080447.
      *
      * Can set [[coord_type]], so $queryParams is array
-     * @param  string|array $queryParams
+     *
+     * @param string|array $queryParams
+     *
      * @return mixed
      */
     public function get($queryParams)
@@ -44,7 +55,7 @@ class Distance extends Api
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     protected function _parseResponse($result)
     {
@@ -53,9 +64,10 @@ class Distance extends Api
             return [
                 'errcode' => 0,
                 'errmsg' => 'success',
-                'data' => $result['results']
+                'data' => $result['results'],
             ];
         }
+
         return ['errcode' => 1, 'errmsg' => $result['status']];
     }
 }

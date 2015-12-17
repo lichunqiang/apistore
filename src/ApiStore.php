@@ -16,7 +16,7 @@ namespace light\apistore;
  * ~~~
  * $store = new ApiStore();
  * $result = $store->phone->get('123123123');
- * ~~~
+ * ~~~.
  */
 class ApiStore
 {
@@ -53,13 +53,14 @@ class ApiStore
      *
      * @throws InvalidaCallException
      * @throws UnknownPropertyException
-     * @return mixed
      *
+     * @return mixed
      */
     public function __get($name)
     {
         if (isset(static::$supportedApis[$name])) {
             $class = static::$supportedApis[$name];
+
             return new $class($this->apikey);
         }
         throw new \Exception('Not exists method');
@@ -72,8 +73,8 @@ class ApiStore
      * @param array  $params the params passed to the method
      *
      * @throws InvalidCallException
-     * @return mixed the method result of calling
      *
+     * @return mixed the method result of calling
      */
     public function __call($name, $params)
     {

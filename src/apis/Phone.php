@@ -12,7 +12,8 @@
 namespace light\apistore\apis;
 
 /**
- * 手机号码归属地查询
+ * 手机号码归属地查询.
+ *
  * @see http://apistore.baidu.com/apiworks/servicedetail/117.html
  */
 class Phone extends Api

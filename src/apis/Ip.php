@@ -12,7 +12,8 @@
 namespace light\apistore\apis;
 
 /**
- * IP地址查询
+ * IP地址查询.
+ *
  * @see http://apistore.baidu.com/apiworks/servicedetail/114.html
  */
 class Ip extends Api
