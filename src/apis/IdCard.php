@@ -33,7 +33,7 @@ class IdCard extends Api
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     protected function _parseResponse($result)
     {
