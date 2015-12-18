@@ -18,5 +18,9 @@
     "psr-4": {
       "light\\apistore\\": "src"
     }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit --coverage-text --coverage-clover ./build/logs/clover.xml",
+    "test-win": "bash vendor/bin/phpunit --coverage-text --coverage-clover ./build/logs/clover.xml  --coverage-html ./build/logs/clover.html"
   }
 }
