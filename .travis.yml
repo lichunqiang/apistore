@@ -26,4 +26,8 @@ install:
 
 
 script:
-    vendor/bin/phpunit --configuration phpunit.xml
+    vendor/bin/phpunit --configuration phpunit.xml --coverage-clover=coverage.clover
+
+after_script:
+    travis_retry wget https://scrutinizer-ci.com/ocular.phar
+    php ocular.phar code-coverage:upload --format=php-clover coverage.clover

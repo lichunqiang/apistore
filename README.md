@@ -4,6 +4,8 @@ apistore
 [![version](https://img.shields.io/packagist/v/light/apistore.svg?style=flat-square)](https://packagist.org/packages/light/apistore)
 [![Download](https://img.shields.io/packagist/dt/light/apistore.svg?style=flat-square)](https://packagist.org/packages/light/apistore)
 [![Issues](https://img.shields.io/github/issues/lichunqiang/apistore.svg?style=flat-square)](https://github.com/lichunqiang/apistore/issues)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/lichunqiang/apistore/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/lichunqiang/apistore/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/lichunqiang/apistore/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/lichunqiang/apistore/?branch=master)
 
 百度APIStore免费接口封装
 
