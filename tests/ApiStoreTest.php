@@ -22,13 +22,32 @@ class StoreTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('\light\apistore\apis\Translate', $store->translate);
     }
 
-    /**
-     * @expectedException \Exception
-     */
     public function testNoInstance()
     {
         $store = new ApiStore('teastaeastsearfaf');
 
-        $store->test;
+        $this->assertEquals('teastaeastsearfaf', $store->apikey);
+
+        return $store;
+    }
+
+    /**
+     * @depends testNoInstance
+     * @expectedException \Exception
+     */
+    public function testGetUnknowProperty($store)
+    {
+        $b = $store->unice;
+    }
+
+    /**
+     * @depends testNoInstance
+     */
+    public function testDirectlyCall($store)
+    {
+        $result = $store->phone('15210340546');
+
+        $this->assertArrayHasKey('errcode', $result);
+        $this->assertEquals($result['errcode'], 300204);
     }
 }

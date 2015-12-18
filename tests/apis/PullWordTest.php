@@ -6,21 +6,22 @@ use light\apistore\ApiStore;
 
 class PullWordTest extends \PHPUnit_Framework_TestCase
 {
-    private $store;
+    private $api;
 
     public function setUp()
     {
-        $this->store = new ApiStore($GLOBALS['api_key']);
+        $this->api = (new ApiStore($GLOBALS['api_key']))->pullword;
     }
 
     public function testFetch()
     {
-        $api = $this->store->pullword;
-
-        $result = $api->get('清华大学是好学校');
+        $result = $this->api->get('清华大学是好学校');
         $this->assertTrue(is_string($result));
+    }
 
-        // $result
-
+    public function testSpecialParams()
+    {
+        $result = $this->api->get(['清华大学是好学校', 0.5, 1]);
+        $this->assertTrue(is_string($result));
     }
 }

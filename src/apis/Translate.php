@@ -20,8 +20,6 @@ class Translate extends Api
 {
     private $address_translate = 'http://apis.baidu.com/apistore/tranlateservice/translate?';
 
-    private $address_dict = 'http://apis.baidu.com/apistore/tranlateservice/dictionary?';
-
     /**
      * 目前词典接口只支持zh和en两种语言
      *
@@ -42,12 +40,5 @@ class Translate extends Api
         }
 
         return $this->fetch($_using_address . http_build_query($queryParams));
-    }
-
-    public function dictionary($words, $from = 'en', $to = 'zh')
-    {
-        $_using_address = $this->address_dict;
-
-        return $this->get($query, $from, $to);
     }
 }
