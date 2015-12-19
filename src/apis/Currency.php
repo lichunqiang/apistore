@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the light/yii2-apistore.
+ * This file is part of the light/apistore.
  *
  * (c) lichunqiang <light-li@hotmail.com>
  *
@@ -32,17 +32,20 @@ class Currency extends Api
      * 获取汇率转换结果.
      *
      * @param array $queryParams
-     *                           ~~~
-     *                           $queryParams = [
-     *                           'fromCurrency' => 'CNY', //待转化的币种
-     *                           'toCurrency' => 'USD',   //转化后的币种
-     *                           'amount' => 2            //转化金额
-     *                           ];
-     *                           ~~~
-     *                           或者
-     *                           ~~~
-     *                           $queryParams = ['CNY', 'USD', 2];
-     *                           ~~~
+     *
+     * ~~~
+     * $queryParams = [
+     *     'fromCurrency' => 'CNY', //待转化的币种
+     *     'toCurrency' => 'USD',   //转化后的币种
+     *     'amount' => 2            //转化金额
+     * ];
+     * ~~~
+     *
+     * 或者
+     *
+     * ~~~
+     * $queryParams = ['CNY', 'USD', 2];
+     * ~~~
      *
      * @return array
      */

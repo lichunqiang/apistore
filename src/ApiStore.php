@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the light/yii2-apistore.
+ * This file is part of the light/apistore.
  *
  * (c) lichunqiang <light-li@hotmail.com>
  *
