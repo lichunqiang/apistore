@@ -48,7 +48,7 @@ class Currency extends Api
      */
     public function get($queryParams)
     {
-        if (!isset($param['fromCurrency'])) {
+        if (!isset($queryParams['fromCurrency'])) {
             $queryParams = array_combine(['fromCurrency', 'toCurrency', 'amount'], $queryParams);
         }
 

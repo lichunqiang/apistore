@@ -23,9 +23,7 @@ class Translate extends Api
     /**
      * 目前词典接口只支持zh和en两种语言
      *
-     * @param string $query 请求的词语或待翻译的内容,UTF-8,urlencode编码
-     * @param string $from  源语言语种：语言代码或auto
-     * @param string $to    目标语言语种：语言代码或auto
+     * @param string|array $queryParams
      *
      * @return array
      */
