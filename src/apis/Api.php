@@ -60,14 +60,23 @@ abstract class Api
      */
     public function fetch($address)
     {
-        $ch = curl_init();
-        $header = $this->prepareHeaders();
-        // 添加apikey到header
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        // 执行HTTP请求
-        curl_setopt($ch, CURLOPT_URL, $address);
-        $res = curl_exec($ch);
+        if (function_exists('curl_init')) {
+            $ch = \curl_init();
+            $header = $this->prepareHeaders();
+            // 添加apikey到header
+            \curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+            \curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            // 执行HTTP请求
+            \curl_setopt($ch, CURLOPT_URL, $address);
+            $res = \curl_exec($ch);
+        } else {
+            $context = stream_context_create([
+                'http' => [
+                    'header' => implode(';', $this->prepareHeaders()),
+                ],
+            ]);
+            $res = file_get_contents($address, null, $context);
+        }
 
         return $this->_parseResponse($res);
     }
