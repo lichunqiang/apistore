@@ -4,7 +4,7 @@ apistore
 [![version](https://img.shields.io/packagist/v/light/apistore.svg?style=flat-square)](https://packagist.org/packages/light/apistore)
 [![Download](https://img.shields.io/packagist/dt/light/apistore.svg?style=flat-square)](https://packagist.org/packages/light/apistore)
 [![Issues](https://img.shields.io/github/issues/lichunqiang/apistore.svg?style=flat-square)](https://github.com/lichunqiang/apistore/issues)
-[![codecov.io](https://img.shields.io/codecov/c/github/lichunqiang/apistore.svg?style=flat-square&branch=tests)](https://codecov.io/github/lichunqiang/apistore?branch=tests)
+[![codecov.io](https://img.shields.io/codecov/c/github/lichunqiang/apistore.svg?style=flat-square)](https://codecov.io/github/lichunqiang/apistore)
 
 百度APIStore免费接口封装
 
