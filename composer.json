@@ -2,7 +2,7 @@
   "name": "light/apistore",
   "description": "百度API商品免费接口封装",
   "type": "library",
-  "keywords": ["yii2","extension","apistore"],
+  "keywords": ["apistore", "APIStore", "百度APIStore", "免费接口", "OCR文字识别", "IP地址查询接口"],
   "license": "MIT",
   "authors": [
     {
