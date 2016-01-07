@@ -58,7 +58,7 @@ abstract class Api
      *
      * @return mixed
      */
-    public function fetch($address)
+    final public function fetch($address)
     {
         if (function_exists('curl_init')) {
             $ch = \curl_init();

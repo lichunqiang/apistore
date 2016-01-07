@@ -18,7 +18,7 @@ namespace light\apistore;
  * $result = $store->phone->get('123123123');
  * ~~~.
  */
-class ApiStore
+final class ApiStore
 {
     /**
      * The app key of calling the interface.
