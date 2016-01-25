@@ -3,8 +3,9 @@ apistore
 [![Build Status](https://img.shields.io/travis/lichunqiang/apistore.svg?style=flat-square)](http://travis-ci.org/lichunqiang/apistore)
 [![version](https://img.shields.io/packagist/v/light/apistore.svg?style=flat-square)](https://packagist.org/packages/light/apistore)
 [![Download](https://img.shields.io/packagist/dt/light/apistore.svg?style=flat-square)](https://packagist.org/packages/light/apistore)
-[![Issues](https://img.shields.io/github/issues/lichunqiang/apistore.svg?style=flat-square)](https://github.com/lichunqiang/apistore/issues)
-[![codecov.io](https://img.shields.io/codecov/c/github/lichunqiang/apistore.svg?style=flat-square)](https://codecov.io/github/lichunqiang/apistore)
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/lichunqiang/apistore.svg?style=flat-square)](https://scrutinizer-ci.com/g/lichunqiang/apistore)
+[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/lichunqiang/apistore.svg?style=flat-square)](https://scrutinizer-ci.com/g/lichunqiang/apistore)
+[![Contact](https://img.shields.io/badge/weibo-@chunqiang-blue.svg?style=flat-square)](http://weibo.com/chunqiang)
 
 百度APIStore免费接口封装
 
